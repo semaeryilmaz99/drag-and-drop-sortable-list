@@ -1,0 +1,61 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap');
+
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #175279;
+}
+
+.sortable-list {
+    background: #f1e8e8;
+    width: 445px;
+    border-radius: 6px;
+    padding: 30px 25px 20px;
+}
+
+.sortable-list .item {
+    list-style: none;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 11px;
+    padding: 10px 13px;
+    align-items: center;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.item .details {
+    display: flex;
+    align-items: center;
+}
+
+.item .details img {
+    width: 43px;
+    height: 43px;
+    margin-right: 12px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.item .details span {
+    font-size: 1.13rem;
+}
+
+.item i {
+    color: #110808;
+    font-size: 1.13rem;
+}
+
+.item.dragging :where(.details, i) {
+    opacity: 0;
+}
